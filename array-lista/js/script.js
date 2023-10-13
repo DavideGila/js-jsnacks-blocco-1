@@ -27,11 +27,25 @@ const frigo = document.getElementById('fridge');
 
 const checkBtn = document.querySelector('button');
 
+let found = false;
+
 checkBtn.addEventListener ('click', function(){
     for (let i = 0; i < frutta.length; i++){
         let listaFrutta = document.createElement('li')
         frigo.append(listaFrutta);
-        console.log(frigo);
-        listaFrutta.innerHTML = i;
+        listaFrutta.innerHTML = frutta[i];
+        const cocomero = 6;
+        // const noCocomero = frutta.slice()
+        let text = document.getElementById('cocomero');
+        if (i === cocomero){
+            found = true;
+            frutta.splice(cocomero, 1);
+        }  
     }
-})
+    let text = document.getElementById('cocomero');
+    if (found) {
+        text.innerText = 'Il cocomero è in frigo';
+    } else {
+        text.innerText = 'Il cocomero non è in frigo';
+    }
+});
