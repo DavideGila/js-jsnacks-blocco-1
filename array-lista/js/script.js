@@ -37,8 +37,10 @@ checkBtn.addEventListener ('click', function(){
         const cocomero = 6;
         if (i === cocomero){
             found = true;
-            frutta.splice(6, cocomero);
-        }  
+            frutta.splice(6, 1);
+        } else {
+
+        }
     }
     let text = document.getElementById('cocomero');
     if (found) {
