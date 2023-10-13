@@ -35,11 +35,9 @@ checkBtn.addEventListener ('click', function(){
         frigo.append(listaFrutta);
         listaFrutta.innerHTML = frutta[i];
         const cocomero = 6;
-        // const noCocomero = frutta.slice()
-        let text = document.getElementById('cocomero');
         if (i === cocomero){
             found = true;
-            frutta.splice(cocomero, 1);
+            frutta.splice(6, cocomero);
         }  
     }
     let text = document.getElementById('cocomero');
