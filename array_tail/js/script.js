@@ -17,6 +17,8 @@ askBtn.addEventListener('click', function(){
     const ask = document.querySelector('input').value;
     for (let i = 0; i < parseInt(ask); i++){
         askedEl.push(getRndInteger(1, 100));
-    }
-    console.log(askedEl)
+        console.log(askedEl);
+    } 
+    let number = document.querySelector('div');
+    number.innerHTML = askedEl.slice(askedEl.length - 5, askedEl.length);  
 })
